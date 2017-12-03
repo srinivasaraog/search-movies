@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="app.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+
+
+   <body ng-app="myapp" class="page">
+
+      <div ng-controller="movieController">
+
+        <div class="input-group search">
+            <input type="text" class="form-control" ng-model="movie" placeholder="Enter maze as movie">
+            <span class="input-group-addon" ng-click="search(movie)">
+                <i class="fa fa-search" ></i>
+            </span>
+        </div>
+        <div class="top row">
+          <ul class="menu textCenter ">
+            <li ng-repeat="movie in movieList | filter:movieName" ng-if="movieName" class="col-md-2">
+
+              <div class="title"><strong class="color">{{movie.Title}}</strong></div>
+              <div><img src="{{movie.Poster}}" class="image "></div>
+              <div> <strong class="color">Relase Year  {{movie.Year}}</strong></div>
+            </li>
+
+           </ul>
+      </div>
+
+      </div>
+
+        <script src="controller/movieController.js">movieController</script>
+        <script src="services/movieService.js">movieService</script>
+        <script src="app.js">main</script>
+
+   </body>
+</html>
