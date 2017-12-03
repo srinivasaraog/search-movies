@@ -1,0 +1,28 @@
+.page {
+  background-color: #080808b3;
+}
+.search {
+  width: 50% !important;
+   margin: 0 auto;
+   padding: 40px;
+
+}
+
+.textCenter{
+text-align: center;
+}
+.menu{
+  list-style-type:none;
+
+}
+.image{
+  max-width:300px;
+  max-height:300px;
+}
+.font{
+  font-size: x-small;
+}
+.color{
+
+  color:white;
+}
